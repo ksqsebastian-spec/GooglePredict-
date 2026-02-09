@@ -85,7 +85,7 @@ export default function AuditScorecard() {
         bg: "bg-red-50 border-red-300",
         text: "text-red-800",
         label: "NICHT BEREIT",
-        message: "Grundlegende L\u00fccken schlie\u00dfen, bevor Werbung sinnvoll ist.",
+        message: "Grundlegende Lücken schließen, bevor Werbung sinnvoll ist.",
       };
     }
     if (totalScore < 70) {
@@ -93,13 +93,13 @@ export default function AuditScorecard() {
         bg: "bg-orange-50 border-orange-300",
         text: "text-orange-800",
         label: "ERST GRUNDLAGEN VERBESSERN",
-        message: "Noch nicht werben \u2014 zuerst die Basis st\u00e4rken.",
+        message: "Noch nicht werben — zuerst die Basis stärken.",
       };
     }
     return {
       bg: "bg-green-50 border-green-300",
       text: "text-green-800",
-      label: "BEREIT F\u00dcR WERBUNG",
+      label: "BEREIT FÜR WERBUNG",
       message: "Anzeigen starten!",
     };
   };
@@ -202,7 +202,7 @@ export default function AuditScorecard() {
             <div className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1 text-sm text-slate-600 sm:grid-cols-3">
               <span><strong>0</strong> = Gar nicht vorhanden</span>
               <span><strong>1</strong> = Schlecht umgesetzt</span>
-              <span><strong>2</strong> = Grundlegend / unvollst\u00e4ndig</span>
+              <span><strong>2</strong> = Grundlegend / unvollständig</span>
               <span><strong>3</strong> = Ausreichend</span>
               <span><strong>4</strong> = Gut</span>
               <span><strong>5</strong> = Hervorragend</span>
@@ -245,7 +245,7 @@ export default function AuditScorecard() {
                 </label>
                 <Input
                   className="input-yellow"
-                  placeholder="z.B. M\u00fcnchen"
+                  placeholder="z.B. München"
                   value={clientInfo.stadt}
                   onChange={(e) => handleClientChange("stadt", e.target.value)}
                 />
@@ -421,7 +421,7 @@ export default function AuditScorecard() {
               </p>
               {totalScore < 40 && (
                 <p className={`mt-2 text-sm ${recommendation.text}`}>
-                  Empfehlung: Grundlegende L\u00fccken schlie\u00dfen, bevor Werbebudget investiert wird.
+                  Empfehlung: Grundlegende Lücken schließen, bevor Werbebudget investiert wird.
                 </p>
               )}
               {totalScore >= 40 && totalScore < 70 && (
